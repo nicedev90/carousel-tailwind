@@ -4,110 +4,113 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script src="https://cdn.tailwindcss.com"></script>
-	<title>Carrousel Tailwind</title>
+	<title>Carrousel Tailwind v 2.0</title>
 </head>
 <body>
-	   
-<section>        
-	<div id="slider-wrapper" class="flex relative max-w-4xl mx-auto bg-gray-100">
-	
-		<div class="w-max flex items-center"> 
-		  <button id="prev" class="p-3 rounded-full bg-white border border-gray-700 shadow-lg">
+	  
+	<div class="slider-container mx-auto flex max-w-xl h-[500px]  overflow-hidden relative bg-blue-200 space-x-6 py-5">
+
+		<button id="prev" class="z-10 absolute self-center h-max rounded-full p-3 bg-gray-200 hover:bg-orange-300 text-2xl font-bold">
 		  	<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
 		  	</svg>
 		  </button>
+
+		<div class="slide absolute h-96">
+			<div class="flex flex-col items-center p-2 w-96 ">
+			  <img src="img/01.jpg" class="object-cover  rounded-md" alt="">
+				<div class="flex flex-col p-2 items-center bg-gray-200 w-full">
+					<h2 class="mt-2 text-2xl font-bold text-gray-700">Titulo</h2>
+		  	  <p class="mt-2 p-4 text-gray-700">
+		  				Lorem ipsum Lorem ipsum dolor, consectetur.
+		  		</p>
+		  	  <button class="mt-4 px-6 py-3 rounded-md bg-orange-600 text-white font-bold">Ver Mas</button>
+				</div>  	  
+		  </div>
+		</div>
+
+		<div class="slide absolute h-96">
+			<div class="flex flex-col items-center p-2 w-96 ">
+			  <img src="img/02.jpg" class="object-cover  rounded-md" alt="">
+				<div class="flex flex-col p-2 items-center bg-gray-200 w-full">
+					<h2 class="mt-2 text-2xl font-bold text-gray-700">Titulo</h2>
+		  	  <p class="mt-2 p-4 text-gray-700">
+		  				Lorem ipsum Lorem ipsum dolor, consectetur.
+		  		</p>
+		  	  <button class="mt-4 px-6 py-3 rounded-md bg-orange-600 text-white font-bold">Ver Mas</button>
+				</div>  	  
+		  </div>
+		</div>
+
+		<div class="slide absolute h-96">
+			<div class="flex flex-col items-center p-2 w-96 ">
+			  <img src="img/03.jpg" class="object-cover  rounded-md" alt="">
+				<div class="flex flex-col p-2 items-center bg-gray-200 w-full">
+					<h2 class="mt-2 text-2xl font-bold text-gray-700">Titulo</h2>
+		  	  <p class="mt-2 p-4 text-gray-700">
+		  				Lorem ipsum Lorem ipsum dolor, consectetur.
+		  		</p>
+		  	  <button class="mt-4 px-6 py-3 rounded-md bg-orange-600 text-white font-bold">Ver Mas</button>
+				</div>  	  
+		  </div>
+		</div>
+
+		<div class="slide absolute h-96">
+			<div class="flex flex-col items-center p-2 w-96 ">
+			  <img src="img/04.jpg" class="object-cover  rounded-md" alt="">
+				<div class="flex flex-col p-2 items-center bg-gray-200 w-full">
+					<h2 class="mt-2 text-2xl font-bold text-gray-700">Titulo</h2>
+		  	  <p class="mt-2 p-4 text-gray-700">
+		  				Lorem ipsum Lorem ipsum dolor, consectetur.
+		  		</p>
+		  	  <button class="mt-4 px-6 py-3 rounded-md bg-orange-600 text-white font-bold">Ver Mas</button>
+				</div>  	  
+		  </div>
 		</div>
 		
-
-	  <ul id="slides-container" class="flex overflow-hidden">
-
-	  	<li class="slide p-2">
-	  	  <div class="flex flex-col items-center border rounded-lg p-2 w-96 bg-green-200">
-		  	  <img src="img/01.jpg" class="object-cover  rounded-md" alt="">
-		  	  <h2 class="mt-2 text-2xl font-bold text-gray-700">Titulo</h2>
-	  	    <p class="mt-2 p-4 text-gray-700">
-	  				Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, est opt
-	  			</p>
-	  	    <button class="mt-4 px-6 py-3 rounded-md bg-orange-600 text-white font-bold">Ver Mas</button>
-	  	  </div>
-	  	</li>
-
-	  	<li class="slide p-2">
-	  	  <div class="flex flex-col items-center border rounded-lg p-2 w-96 bg-green-200">
-		  	  <img src="img/02.jpg" class="object-cover  rounded-md" alt="">
-		  	  <h2 class="mt-2 text-2xl font-bold text-gray-700">Titulo</h2>
-	  	    <p class="mt-2 p-4 text-gray-700">
-	  				Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, est opt
-	  			</p>
-	  	    <button class="mt-4 px-6 py-3 rounded-md bg-blue-600 text-white font-bold">Ver Mas</button>
-	  	  </div>
-	  	</li>
-
-
-	  	<li class="slide p-2">
-	  	  <div class="flex flex-col items-center border rounded-lg p-2 w-96 bg-green-200">
-		  	  <img src="img/03.jpg" class="object-cover  rounded-md" alt="">
-		  	  <h2 class="mt-2 text-2xl font-bold text-gray-700">Titulo</h2>
-	  	    <p class="mt-2 p-4 text-gray-700">
-	  				Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, est opt
-	  			</p>
-	  	    <button class="mt-4 px-6 py-3 rounded-md bg-blue-600 text-white font-bold">Ver Mas</button>
-	  	  </div>
-	  	</li>    
-
-			<li class="slide p-2">
-	  	  <div class="flex flex-col items-center border rounded-lg p-2 w-96 bg-green-200">
-		  	  <img src="img/04.jpg" class="object-cover  rounded-md" alt="">
-		  	  <h2 class="mt-2 text-2xl font-bold text-gray-700">Titulo</h2>
-	  	    <p class="mt-2 p-4 text-gray-700">
-	  				Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, est opt
-	  			</p>
-	  	    <button class="mt-4 px-6 py-3 rounded-md bg-blue-600 text-white font-bold">Ver Mas</button>
-	  	  </div>
-	  	</li>
-
-			<li class="slide p-2">
-	  	  <div class="flex flex-col items-center border rounded-lg p-2 w-96 bg-green-200">
-		  	  <img src="img/05.jpg" class="object-cover  rounded-md" alt="">
-		  	  <h2 class="mt-2 text-2xl font-bold text-gray-700">Titulo</h2>
-	  	    <p class="mt-2 p-4 text-gray-700">
-	  				Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, est opt
-	  			</p>
-	  	    <button class="mt-4 px-6 py-3 rounded-md bg-blue-600 text-white font-bold">Ver Mas</button>
-	  	  </div>
-	  	</li>
-
-
-		</ul>
-
-		<div class="w-max flex items-center">
-			<button id="next" class="p-3 rounded-full bg-white border border-gray-700 shadow-lg">
-				<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-				</svg>
-			</button>
-		</div>
+		<button id="next" class="z-10 right-0 absolute self-center h-max rounded-full p-3 bg-gray-200 hover:bg-orange-300 text-2xl font-bold">
+			<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+			</svg>
+		</button>
 
 	</div>
-</section>
-
-
 
 <script>    
 
-const slidesContainer = document.getElementById("slides-container")
-const slide = document.querySelector(".slide")
-const prevButton = document.getElementById("prev")
-const nextButton = document.getElementById("next")
-
-nextButton.addEventListener("click", () => {
-  const slideWidth = slide.clientWidth
-  slidesContainer.scrollLeft += slideWidth
+const slides = document.querySelectorAll('.slide')
+slides.forEach((slide, index) => {
+	slide.style.transform = `translateX(${index * 100}%)`
 })
 
-prevButton.addEventListener("click", () => {
-  const slideWidth = slide.clientWidth;
-  slidesContainer.scrollLeft -= slideWidth
+let maxSlide = slides.length -1
+let currentSlide = 0
+
+const nextBtn = document.querySelector('#next')
+nextBtn.addEventListener('click', () => {
+	// check if current slide is the last and reset currentSlide counter
+	if(currentSlide === maxSlide) {
+		currentSlide = 0
+	} else {
+		currentSlide++
+	}
+
+	//  move slide by -100%
+	slides.forEach((slide, index) => {
+		slide.style.transform = `translateX(${100 * (index - currentSlide)}%)`
+	})
+})
+
+const prevBtn = document.querySelector('#prev')
+prevBtn.addEventListener('click', () => {
+	if(currentSlide === 0) {
+		currentSlide = maxSlide
+	} else {
+		currentSlide--
+	}
+
+	slides.forEach((slide, index) => {
+		slide.style.transform = `translateX(${100 * (index - currentSlide)}%)`
+	})
 })
 
 </script>
