@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://cdn.tailwindcss.com"></script>
+	<title>Carrousel Tailwind</title>
+</head>
+<body>
+	   
+<section>        
+	<div id="slider-wrapper" class="flex relative max-w-4xl mx-auto bg-gray-100">
+	
+		<div class="w-max flex items-center"> 
+		  <button id="prev" class="p-3 rounded-full bg-white border border-gray-700 shadow-lg">
+		  	<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+		  	</svg>
+		  </button>
+		</div>
+		
+
+	  <ul id="slides-container" class="flex overflow-hidden">
+
+	  	<li class="slide p-2">
+	  	  <div class="flex flex-col items-center border rounded-lg p-2 w-96 bg-green-200">
+		  	  <img src="/img/01.jpg" class="object-cover  rounded-md" alt="">
+		  	  <h2 class="mt-2 text-2xl font-bold text-gray-700">Titulo</h2>
+	  	    <p class="mt-2 p-4 text-gray-700">
+	  				Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, est opt
+	  			</p>
+	  	    <button class="mt-4 px-6 py-3 rounded-md bg-orange-600 text-white font-bold">Ver Mas</button>
+	  	  </div>
+	  	</li>
+
+	  	<li class="slide p-2">
+	  	  <div class="flex flex-col items-center border rounded-lg p-2 w-96 bg-green-200">
+		  	  <img src="img/02.jpg" class="object-cover  rounded-md" alt="">
+		  	  <h2 class="mt-2 text-2xl font-bold text-gray-700">Titulo</h2>
+	  	    <p class="mt-2 p-4 text-gray-700">
+	  				Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, est opt
+	  			</p>
+	  	    <button class="mt-4 px-6 py-3 rounded-md bg-blue-600 text-white font-bold">Ver Mas</button>
+	  	  </div>
+	  	</li>
+
+
+	  	<li class="slide p-2">
+	  	  <div class="flex flex-col items-center border rounded-lg p-2 w-96 bg-green-200">
+		  	  <img src="/img/03.jpg" class="object-cover  rounded-md" alt="">
+		  	  <h2 class="mt-2 text-2xl font-bold text-gray-700">Titulo</h2>
+	  	    <p class="mt-2 p-4 text-gray-700">
+	  				Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, est opt
+	  			</p>
+	  	    <button class="mt-4 px-6 py-3 rounded-md bg-blue-600 text-white font-bold">Ver Mas</button>
+	  	  </div>
+	  	</li>    
+
+			<li class="slide p-2">
+	  	  <div class="flex flex-col items-center border rounded-lg p-2 w-96 bg-green-200">
+		  	  <img src="/img/04.jpg" class="object-cover  rounded-md" alt="">
+		  	  <h2 class="mt-2 text-2xl font-bold text-gray-700">Titulo</h2>
+	  	    <p class="mt-2 p-4 text-gray-700">
+	  				Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, est opt
+	  			</p>
+	  	    <button class="mt-4 px-6 py-3 rounded-md bg-blue-600 text-white font-bold">Ver Mas</button>
+	  	  </div>
+	  	</li>
+
+			<li class="slide p-2">
+	  	  <div class="flex flex-col items-center border rounded-lg p-2 w-96 bg-green-200">
+		  	  <img src="/img/05.jpg" class="object-cover  rounded-md" alt="">
+		  	  <h2 class="mt-2 text-2xl font-bold text-gray-700">Titulo</h2>
+	  	    <p class="mt-2 p-4 text-gray-700">
+	  				Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, est opt
+	  			</p>
+	  	    <button class="mt-4 px-6 py-3 rounded-md bg-blue-600 text-white font-bold">Ver Mas</button>
+	  	  </div>
+	  	</li>
+
+
+		</ul>
+
+		<div class="w-max flex items-center">
+			<button id="next" class="p-3 rounded-full bg-white border border-gray-700 shadow-lg">
+				<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+				</svg>
+			</button>
+		</div>
+
+	</div>
+</section>
+
+
+
+<script>    
+
+const slidesContainer = document.getElementById("slides-container")
+const slide = document.querySelector(".slide")
+const prevButton = document.getElementById("prev")
+const nextButton = document.getElementById("next")
+
+nextButton.addEventListener("click", () => {
+  const slideWidth = slide.clientWidth
+  slidesContainer.scrollLeft += slideWidth
+})
+
+prevButton.addEventListener("click", () => {
+  const slideWidth = slide.clientWidth;
+  slidesContainer.scrollLeft -= slideWidth
+})
+
+</script>
+
+</body>
+</html>
