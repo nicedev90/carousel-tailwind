@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/styles.css">
+	<script src="https://cdn.tailwindcss.com"></script>
+	<title>Password checker</title>
+</head>
+<body>
+	<div class="container flex flex-col relative max-w-xl mx-auto border rounded-lg p-4 my-5 bg-gray-400 space-y-3">
+		<h2 class="text-2xl font-bold text-white">Password Strength Check</h2>
+
+		<div class="relative flex p-3 ">
+			<input id="password"  type="password" placeholder="password" class="border-0 outline-none w-1/2 bg-gray-200 p-2 ">
+			<button class="show bg-green-600 text-white p-2 w-16 outline-none hover:bg-green-500 font-bold"></button>
+			
+			<div class="pass-check absolute bottom-0 left-0 w-full h-1 "></div>
+		</div>
+		
+	</div>
+
+	<script src="js/checker.js"></script>
+</body>
+</html>
